@@ -43,17 +43,36 @@ export function About() {
               transition={{ delay: 0.3 }}
               className="space-y-6 max-w-xl text-gray-500 text-lg font-light leading-relaxed"
             >
-              <p>
-                I'm a passionate product designer with over 1.5 years of
-                experience creating user-centered designs that make a
-                difference. My journey in design started with a fascination for
-                how people interact with products.
+              <p className="text-lg leading-8 text-gray-700">
+                Hi, I’m{" "}
+                <span className="highlight-primary">Amit Singh</span>, a{" "}
+                <span className="highlight-soft">23-year-old Product Designer</span> based in{" "}
+                <span className="highlight-strong">Bengaluru, India</span>.
+                I'm currently working at a{" "}
+                <span className="highlight-primary">stealth startup</span>, where I focus on creating{" "}
+                <span className="highlight-soft">intuitive</span> and{" "}
+                <span className="highlight-soft">impactful digital experiences</span>.
+                I’m passionate about crafting designs that not only{" "}
+                <span className="highlight-strong">look great</span> but also{" "}
+                <span className="highlight-soft">solve real user problems</span>.
               </p>
 
-              <p>
-                I specialize in user research, interaction design, and design
-                systems. My approach combines empathy, data-driven insights, and
-                creative thinking to solve complex problems at scale.
+              <p className="text-lg leading-8 text-gray-700">
+                I specialize in{" "}
+                <span className="highlight-strong">UI/UX design</span>,{" "}
+                <span className="highlight-soft">product thinking</span>, and building{" "}
+                <span className="highlight-soft">scalable design systems</span>.
+                My approach blends{" "}
+                <span className="highlight-soft">user-centered design</span>,{" "}
+                <span className="highlight-soft">structured problem-solving</span>, and{" "}
+                <span className="highlight-soft">visual clarity</span> to craft{" "}
+                <span className="highlight-soft">intuitive interfaces</span> and{" "}
+                <span className="highlight-soft">seamless user experiences</span>.
+                From{" "}
+                <span className="highlight-soft">wireframes</span> to{" "}
+                <span className="highlight-soft">high-fidelity designs</span>, I focus on creating solutions that are not only{" "}
+                <span className="highlight-soft">aesthetically strong</span> but also{" "}
+                <span className="highlight-soft">practical and impactful at scale</span>.
               </p>
             </motion.div>
 

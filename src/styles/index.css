@@ -38,3 +38,15 @@
     );
   }
 }
+
+.highlight-primary {
+  @apply font-semibold text-black border-b-2 border-blue-400;
+}
+
+.highlight-soft {
+  @apply font-semibold text-black bg-blue-100 px-1 rounded;
+}
+
+.highlight-strong {
+  @apply font-semibold text-blue-600 underline underline-offset-4;
+}
