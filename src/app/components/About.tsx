@@ -75,19 +75,6 @@ export function About() {
                 <span className="highlight-soft">practical and impactful at scale</span>.
               </p>
             </motion.div>
-
-            <div className="mt-12 pt-8 border-t border-gray-200 flex flex-wrap gap-3 text-[#1e60ff]">
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] opacity-60 py-2 px-4 border border-[#1e60ff] rounded-full">
-                {" "}
-                Design Strategy
-              </span>
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] opacity-60 py-2 px-4 border border-[#1e60ff] rounded-full">
-                User Research
-              </span>
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] opacity-60 py-2 px-4 border border-[#1e60ff] rounded-full">
-                Visual Systems
-              </span>
-            </div>
           </div>
 
           <motion.div
