@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Amit from "@/assets/1000269210.webp";
+import Amit from "@/assets/amit-profile-pic.webp";
 
 export function About() {
   return (
@@ -81,7 +81,7 @@ export function About() {
               <img
                 src={Amit}
                 alt="Amit Singh Profile"
-                className="w-full h-auto  rounded-3xl object-cover transform scale-110 lg:scale-[1.2] origin-bottom drop-shadow-[0_25px_50px_rgba(0,0,0,0.4)]"
+                className="w-full h-auto rounded-xl object-cover transform scale-110 lg:scale-[1.2] origin-bottom "
               />
             </div>
           </motion.div>

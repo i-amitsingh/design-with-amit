@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import damini from "@/assets/damini.jpeg";
+import hardik from "@/assets/hardik.jpeg";
+import kunal from "@/assets/kunal.jpeg";
+import rono from "@/assets/rono.jpeg";
+import aditya from "@/assets/aditya.jpeg";
 
 const testimonials = [
   {
@@ -7,40 +12,35 @@ const testimonials = [
     role: "Founder, Saarthi",
     content:
       "Amit's ability to translate complex career-pathing AI into a simple, intuitive interface was impressive. He conducted deep UX research into the Indian graduate market, resulting in a minimalist 'Sequoia-inspired' aesthetic.",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D5603AQHVBcSeTEnBHg/profile-displayphoto-shrink_200_200/B56ZOaUB2eGwAg-/0/1733460762770?e=1777507200&v=beta&t=cu2Qhxw3Dy7pkHnRSqffaK4l4qHG3jc5OlGIxQeIcBw",
+    avatar: aditya,
   },
   {
     name: "Damini Agrawal",
     role: "Co-Founder, cricIQ",
     content:
       "As the designer for cricIQ, Amit solved the massive challenge of visualizing dense cricket performance data. His work is the primary reason our platform feels like a world-class product.",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D5603AQEi80DOGG9rYg/profile-displayphoto-scale_100_100/B56Z0HW9O.KAAc-/0/1773944960835?e=1777507200&v=beta&t=6vbrVP5sITQuHKcuHqvDrUEr56mkIw-XCw7iKZmiaKQ",
+    avatar: damini,
   },
   {
     name: "Hardik Panchal",
     role: "Senior Technical PM, NetApp",
     content:
       "Amit transformed our enterprise-level dashboards with a modern, user-centric approach. He managed to clean up complex system configurations and increase user engagement by 50%.",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D5603AQH0JKC-cvakdQ/profile-displayphoto-scale_400_400/B56Zxzeu8nKgAg-/0/1771463963822?e=1777507200&v=beta&t=LIeLL3_14f8FSWvRxJwn-9Qc5GlsLBwS5vo3vrr5p9c",
+    avatar: hardik,
   },
   {
     name: "Kunal Abhishek",
     role: "Co-Founder, SportzEngage",
     content:
       "Working with Amit was a game-changer for our product vision. High-fidelity prototyping allowed us to validate our core user flows quickly. He ensures the product logic makes sense.",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D5603AQGqy26JthfLaA/profile-displayphoto-scale_100_100/B56ZiIuSJUG0Ac-/0/1754640493184?e=1777507200&v=beta&t=8gsRul61cigI9LWgGW3t1v1yA4aOVLWwtyRa7tRNOZQ",
+    avatar: kunal,
   },
   {
     name: "Rono Chakravarty",
     role: "Head of Creative, MPL",
     content:
       "Amit's attention to detail in visual branding is exceptional. He understands how to balance whitespace and bold accents to create a sense of urgency and professionalism.",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D5603AQF7Pgn0qTU25Q/profile-displayphoto-shrink_400_400/B56ZTVPb57GQAg-/0/1738744381985?e=1778112000&v=beta&t=prs8wjMPwrvtnWXkDGuwWnrsGTOJ7ASaoMJjtw4LQSE",
+    avatar: rono,
   },
 ];
 
@@ -114,7 +114,6 @@ export function Testimonials() {
                     alt={testimonial.name}
                     className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
-                  <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-[#1e60ff] border-2 border-white rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 delay-100"></div>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-black tracking-tight leading-tight group-hover:text-[#1e60ff] transition-colors duration-300">

@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import criciqLogo from "@/assets/criciq.png";
+import sophrosyneLogo from "@/assets/Sophrosyne.jpeg";
+import saarthiLogo from "@/assets/Saarthi.jpeg";
 
 const experiences = [
   {
@@ -8,8 +11,7 @@ const experiences = [
     period: "March 2026 - Present",
     description:
       "Designed and developed performance analysis features at CricIQ, enabling tracking of bowlers’ speed, consistency, and progress over time. Built intuitive dashboards that transformed raw performance data into clear, actionable insights for users. Created end-to-end user experiences for performance monitoring, including speed tracking and trend analysis.",
-    logo: "https://media.licdn.com/dms/image/v2/D560BAQEbt_MC5wu6pQ/company-logo_200_200/B56Zz_TYiuKAAI-/0/1773809798567/criciq_logo?e=1777507200&v=beta&t=D1Ryv_xf1mXNSPjh9qUsJOMBUNCofkfZeQv8vY-as7s",
-    current: true,
+    logo: criciqLogo,
   },
   {
     title: "Product Designer - I",
@@ -17,16 +19,15 @@ const experiences = [
     period: "Apr 2025 - Present",
     description:
       "Designed and delivered the complete UX/UI for a Remote Patient Monitoring System tailored for users aged 40+, including login/signup, dashboards, settings, and notification flows across both patient and doctor interfaces. Created high-fidelity prototypes and design systems in Figma, prioritizing accessibility and real-time health metrics.",
-    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQHcP2RhMgFNkQ/company-logo_200_200/B4DZihb6PhGkAI-/0/1755055105883?e=1777507200&v=beta&t=Y42g2Wk0vEdHPjNEMgJrjRfjkc-P8D2cSFSilj6SQ3k",
-    current: true,
+    logo: sophrosyneLogo,
   },
   {
     title: "User Experience Designer",
     company: "Saarthi",
-    period: "Dec 2024 - Mar 2025",
+    period: "Sep 2024 - Mar 2025",
     description:
       "Designed both mobile app and website end-to-end for a job-hunting platform. Created wireframes, interactive prototypes, and complete UI designs focused on helping students discover opportunities easily and build strong career profiles.",
-    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQH2kqkHPIY0Kg/company-logo_200_200/company-logo_200_200/0/1733717522738?e=1777507200&v=beta&t=ycKX85L39V1NqKgf-s6Lc66bKjomyf4kaS4AWWSoJ_I",
+    logo: saarthiLogo,
   },
 ];
 
@@ -113,12 +114,6 @@ export function Experience() {
                         className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700"
                       />
                     </div>
-                    {exp.current && (
-                      <span className="absolute -top-1 -right-1 flex h-4 w-4">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1e60ff] opacity-40"></span>
-                        <span className="relative inline-flex rounded-full h-4 w-4 bg-[#1e60ff] border-2 border-white"></span>
-                      </span>
-                    )}
                   </div>
 
                   <div className="flex-1">
