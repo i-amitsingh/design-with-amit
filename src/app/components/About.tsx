@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Amit from "@/assets/amit-profile-pic.webp";
+import Amit from "@/assets/Amit-Profile-Pic.webp";
 
 export function About() {
   return (
