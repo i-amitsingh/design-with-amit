@@ -1,22 +1,32 @@
-import { defineConfig } from 'vite'
-import path from 'path'
-import tailwindcss from '@tailwindcss/vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import { fileURLToPath, URL } from "node:url";
 
 export default defineConfig({
-  plugins: [
-    // The React and Tailwind plugins are both required for Make, even if
-    // Tailwind is not being actively used – do not remove them
-    react(),
-    tailwindcss(),
-  ],
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      // Alias @ to the src directory
-      '@': path.resolve(__dirname, './src'),
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-
-  // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
-  assetsInclude: ['**/*.svg', '**/*.csv'],
-})
+  server: {
+    proxy: {
+      '/notion-api': {
+        target: 'https://www.notion.so/api/v3',
+        changeOrigin: true,
+        secure: false, 
+        rewrite: (path) => path.replace(/^\/notion-api/, ''),
+        // NEW: This block intercepts the request and spoofs the headers
+        configure: (proxy, _options) => {
+          proxy.on('proxyReq', (proxyReq, req, _res) => {
+            proxyReq.setHeader('Origin', 'https://www.notion.so');
+            proxyReq.setHeader('Referer', 'https://www.notion.so/');
+            // Some Notion endpoints also require this to accept the JSON body
+            proxyReq.setHeader('Content-Type', 'application/json');
+          });
+        }
+      }
+    }
+  }
+});

@@ -23,7 +23,7 @@ export function Navbar() {
     { href: "#testimonials", label: "Testimonials" },
   ];
 
-  const scrollToSection = (e, href) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsMenuOpen(false);
 
@@ -40,15 +40,14 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] transition-all duration-500 flex justify-center py-6">
       <nav
-        className={`relative flex items-center justify-between px-6 transition-all duration-500 ease-in-out ${
-          scrolled
-            ? "w-[95%] max-w-5xl rounded-full bg-white/70 backdrop-blur-xl border border-gray-200/50 shadow-[0_8px_32px_rgba(0,0,0,0.05)] py-3"
-            : "w-full max-w-7xl bg-transparent py-4"
-        }`}
+        className={`relative flex items-center justify-between px-6 transition-all duration-500 ease-in-out ${scrolled
+          ? "w-[95%] max-w-5xl rounded-full bg-white/70 backdrop-blur-xl border border-gray-200/50 shadow-[0_8px_32px_rgba(0,0,0,0.05)] py-3"
+          : "w-full max-w-7xl bg-transparent py-4"
+          }`}
       >
         <a
           href="/"
-          onClick={(e) => {
+          onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
