@@ -41,7 +41,7 @@ export const projects: Project[] = [
       "A healthcare revolution for the fragmented Indian medical ecosystem. Organising medical records and history through an intuitive, accessible mobile interface designed for impact.",
     category: "HealthTech / Product Design",
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1080", 
-    link: "/project/sehatsetu",
+    link: "https://mini-snowshoe-f7b.notion.site/SehatSetu-Health-Records-Management-App-2ba6a88bfb95809b9296ecafc610af12?pvs=74",
     bgClass: "bg-[#F0F9F6]", 
     accentText: "text-[#0D9488]",
     tools: [
@@ -58,7 +58,7 @@ export const projects: Project[] = [
       "A digital library experience reimagining how students discover and manage academic resources. Capture ideas instantly across all devices, then refine them when you're ready.",
     category: "Product Design",
     image: "https://images.unsplash.com/photo-1666723043169-22e29545675c?auto=format&fit=crop&q=80&w=1080",
-    link: "/project/bookly",
+    link: "https://mini-snowshoe-f7b.notion.site/UX-UI-Case-Study-Bookly-Your-Personalized-Reading-Companion-1d66a88bfb9580d09c5fc392cb416084",
     bgClass: "bg-[#E8EEFF]",
     accentText: "text-[#3B65F5]",
     tools: [
@@ -103,19 +103,19 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </div>
 
           <button
-  onClick={() => navigate(`/project/${project.id}`)}
-  className="group relative self-start cursor-pointer px-10 py-5 text-black border border-black rounded-full overflow-hidden transition-all duration-500 ease-in-out active:scale-95 hover:border-[#1e60ff] hover:text-white flex items-center gap-3 bg-transparent"
->
-  <span className="relative z-10 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em]">
-    View Case Study
-    <ArrowRight
-      size={16}
-      className="transition-transform duration-300 group-hover:translate-x-1.5"
-    />
-  </span>
+            onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
+            className="group relative self-start cursor-pointer px-10 py-5 text-black border border-black rounded-full overflow-hidden transition-all duration-500 ease-in-out active:scale-95 hover:border-[#1e60ff] hover:text-white flex items-center gap-3 bg-transparent"
+          >
+            <span className="relative z-10 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em]">
+              View Case Study
+              <ArrowRight
+                size={16}
+                className="transition-transform duration-300 group-hover:translate-x-1.5"
+              />
+            </span>
 
-  <div className="absolute inset-0 bg-[#1e60ff] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
-</button>
+            <div className="absolute inset-0 bg-[#1e60ff] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
+          </button>
         </div>
 
         <div className="w-full lg:w-[52%] order-1 lg:order-2">

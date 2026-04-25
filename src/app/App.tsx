@@ -7,7 +7,6 @@ import { Projects } from "./components/Projects";
 import { Events } from "./components/Events";
 import { Testimonials } from "./components/Testimonials";
 import { Footer } from "./components/Footer";
-import { CaseStudy } from "./components/CaseStudy";
 
 function HomePage() {
   return (
@@ -29,7 +28,6 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/project/:id" element={<CaseStudy />} />
       </Routes>
     </BrowserRouter>
   );
