@@ -54,25 +54,6 @@ export const projects: Project[] = [
       { name: "Prototyping", icon: <PlusCircle size={20} /> },
     ],
   },
-  {
-    id: "bookly",
-    title: "Bookly",
-    summary:
-      "A digital library experience reimagining how students discover and manage academic resources.",
-    category: "Product Design",
-    image:
-      "https://images.unsplash.com/photo-1666723043169-22e29545675c?auto=format&fit=crop&q=80&w=1080",
-    link: "https//www.google.com",
-    bgClass: "bg-[#E8EEFF]",
-    accentText: "text-[#3B65F5]",
-    accentBg: "bg-[#3B65F5]",
-    tools: [
-      { name: "Figma", icon: <Layout size={20} /> },
-      { name: "Research", icon: <Search size={20} /> },
-      { name: "Prototyping", icon: <Sparkles size={20} /> },
-      { name: "Documentation", icon: <FileText size={20} /> },
-    ],
-  },
 ];
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
