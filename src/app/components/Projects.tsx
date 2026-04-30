@@ -92,22 +92,21 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </div>
 
           <button
-            onClick={() => navigate(`/project/${project.id}`)}
-            className="group/btn relative self-start cursor-pointer px-10 py-5 border border-black rounded-full overflow-hidden transition-all duration-500 ease-in-out active:scale-95 flex items-center gap-3 bg-transparent"
-          >
-            <span className="relative z-10 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors duration-300 group-hover/btn:text-white">
-              View Case Study
-              <ArrowRight
-                size={16}
-                className="transition-transform duration-300 group-hover/btn:translate-x-1.5"
-              />
-            </span>
+  onClick={() => window.open(project.link, "_blank")}
+  className="group/btn relative self-start cursor-pointer px-10 py-5 border border-black rounded-full overflow-hidden transition-all duration-500 ease-in-out active:scale-95 flex items-center gap-3 bg-transparent"
+>
+  <span className="relative z-10 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors duration-300 group-hover/btn:text-white">
+    View Case Study
+    <ArrowRight
+      size={16}
+      className="transition-transform duration-300 group-hover/btn:translate-x-1.5"
+    />
+  </span>
 
-            {/* Dynamic hover bg */}
-            <div
-              className={`absolute inset-0 ${project.accentBg} translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out`}
-            />
-          </button>
+  <div
+    className={`absolute inset-0 ${project.accentBg} translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out`}
+  />
+</button>
         </div>
 
         {/* RIGHT IMAGE */}
@@ -145,7 +144,16 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 export function Projects() {
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-[1400px] mx-auto px-6">
+      <div className="max-w-[1300px] mx-auto px-6 lg:px-12 relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+          <h2 className="text-5xl md:text-7xl font-semibold text-black tracking-tighter leading-none">
+            Selected <span className="text-gray-400">Work</span>
+          </h2>
+
+          <p className="text-xl text-gray-500 max-w-sm font-light leading-relaxed">
+            A collection of impactful products focused on solving real-world problems through thoughtful design, research, and scalable user experiences.
+          </p>
+        </div>
         <div className="flex flex-col gap-24">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
