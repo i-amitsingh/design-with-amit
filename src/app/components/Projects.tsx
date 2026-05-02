@@ -6,7 +6,7 @@ import {
   Database,
   ArrowRight,
 } from "lucide-react";
-import booklyThumbnail from "@/assets/booklythumbnail.png";
+import booklyThumbnail from "@/assets/booklyThumbnail.png";
 import sehatsetuThumbnail from "@/assets/sehatSetuThumbnail.png"
 
 interface Tool {
