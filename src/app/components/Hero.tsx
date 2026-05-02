@@ -85,8 +85,7 @@ export function Hero() {
             className="text-lg md:text-xl text-gray-500 max-w-2xl mb-12 font-light leading-relaxed"
           >
             Product Designer specializing in high-performance digital
-            experiences. Currently shaping the future of sports-tech at{" "}
-            <span className="text-black font-medium">CricIQ</span>.
+            experiences.
           </motion.p>
 
           <div className="flex flex-col items-center gap-8 mb-20">

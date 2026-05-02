@@ -7,6 +7,7 @@ export function About() {
       id="about"
       className="relative py-24 md:py-32 overflow-hidden bg-white"
     >
+      {/* DOT BG */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
@@ -15,15 +16,10 @@ export function About() {
         }}
       ></div>
 
-      <div
-        className="absolute inset-0 bg-gray-100 z-0"
-        style={{
-          clipPath: "polygon(0 15%, 100% 0, 100% 100%, 0 100%)",
-        }}
-      />
-
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-end">
+
+          {/* LEFT CONTENT (UNCHANGED) */}
           <div className="text-white pb-12 lg:pb-24 order-2 lg:order-1 mt-24">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -45,51 +41,55 @@ export function About() {
               <p className="text-lg leading-8 text-gray-700">
                 Hi, I’m{" "}
                 <span className="highlight-primary">Amit Singh</span>, a{" "}
-                <span className="highlight-soft">23-year-old Product Designer</span> based in{" "}
-                <span className="highlight-strong">Bengaluru, India</span>.
-                I'm currently working at a{" "}
-                <span className="highlight-primary">stealth startup</span>, where I focus on creating{" "}
-                <span className="highlight-soft">intuitive</span> and{" "}
-                <span className="highlight-soft">impactful digital experiences</span>.
-                I’m passionate about crafting designs that not only{" "}
-                <span className="highlight-strong">look great</span> but also{" "}
-                <span className="highlight-soft">solve real user problems</span>.
+                <span className="highlight-soft">Product Designer</span> based in{" "}
+                <span className="highlight-strong">Bengaluru, India</span>,
+                working with{" "}
+                <span className="highlight-primary">early-stage startups</span>,to turn ideas into scalable digital products.
               </p>
 
               <p className="text-lg leading-8 text-gray-700">
-                I specialize in{" "}
-                <span className="highlight-strong">UI/UX design</span>,{" "}
-                <span className="highlight-soft">product thinking</span>, and building{" "}
-                <span className="highlight-soft">scalable design systems</span>.
-                My approach blends{" "}
-                <span className="highlight-soft">user-centered design</span>,{" "}
-                <span className="highlight-soft">structured problem-solving</span>, and{" "}
-                <span className="highlight-soft">visual clarity</span> to craft{" "}
-                <span className="highlight-soft">intuitive interfaces</span> and{" "}
-                <span className="highlight-soft">seamless user experiences</span>.
-                From{" "}
-                <span className="highlight-soft">wireframes</span> to{" "}
-                <span className="highlight-soft">high-fidelity designs</span>, I focus on creating solutions that are not only{" "}
-                <span className="highlight-soft">aesthetically strong</span> but also{" "}
-                <span className="highlight-soft">practical and impactful at scale</span>.
+                I specialize in <span className="highlight-primary">UI/UX design, product thinking, and building design systems</span>  that improve consistency and speed across teams. I’ve worked on end-to-end product experiences-from onboarding flows to complex dashboards-focusing on <span className="highlight-soft">clarity, usability, and real-world impact</span>.
               </p>
+
+              <p className="text-lg leading-8 text-gray-700">My approach combines <span className="highlight-soft">user-centered design, structured problem-solving, and rapid iteration</span> to create experiences that are simple, effective, and built to scale.</p>
             </motion.div>
           </div>
 
+          {/* RIGHT IMAGE CARD */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="relative flex justify-center lg:justify-end order-1 lg:order-2"
           >
-            <div className="relative w-full max-w-md lg:max-w-lg overflow-visible">
-              <img
-                src={Amit}
-                alt="Amit Singh Profile"
-                className="w-full h-auto rounded-xl object-cover transform scale-110 lg:scale-[1.2] origin-bottom "
-              />
+            <div className="w-full max-w-md bg-white rounded-[32px] shadow-[0_25px_70px_rgba(0,0,0,0.12)] p-4 hover:scale-[1.02] transition duration-500">
+
+              {/* IMAGE */}
+              <div className="rounded-[24px] overflow-hidden">
+                <img
+                  src={Amit}
+                  alt="Amit Singh Profile"
+                  className="w-full h-[420px] object-cover"
+                />
+              </div>
+
+              {/* PROFILE FOOTER */}
+              <div className="flex items-center justify-center mt-4 px-2">
+
+                <div className="flex items-center gap-3">
+                  <div>
+                    <p className="text-sm font-semibold text-gray-800">
+                      @amit_singh
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      Product Designer
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>
